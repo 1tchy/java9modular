@@ -105,8 +105,8 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/1tchy/modular-repackaging.git</connection>
-        <developerConnection>scm:git:ssh://github.com:1tchy/modular-repackaging.git</developerConnection>
+        <connection>scm:git:git://github.com/1tchy/java9modular.git</connection>
+        <developerConnection>scm:git:ssh://github.com/1tchy/java9modular.git</developerConnection>
         <url>http://github.com/1tchy/modular-repackaging/tree/master</url>
     </scm>
 
