@@ -4,12 +4,12 @@
 
     <groupId>io.github.1tchy.java9modular.org.apache.commons</groupId>
     <artifactId>commons-compress</artifactId>
-    <version>1.18.1</version>
+    <version>1.18.2-SNAPSHOT</version>
 
     <parent>
         <groupId>io.github.1tchy.java9modular</groupId>
         <artifactId>parent</artifactId>
-        <version>0.0.0.2</version>
+        <version>0.0.0.3-SNAPSHOT</version>
     </parent>
 
     <properties>
