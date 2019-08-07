@@ -101,6 +101,7 @@
 
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/1tchy/modular-repackaging</url>
+    <description>(Parent) project to add Java 9 module-infos to other projects.</description>
 
     <licenses>
         <license>
@@ -119,9 +120,9 @@
     <scm>
         <connection>scm:git:git://github.com/1tchy/java9modular.git</connection>
         <developerConnection>scm:git:ssh://github.com/1tchy/java9modular.git</developerConnection>
-        <url>http://github.com/1tchy/modular-repackaging/tree/master</url>
-      <tag>HEAD</tag>
-  </scm>
+        <url>http://github.com/1tchy/java9modular/tree/master</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <distributionManagement>
         <snapshotRepository>
