@@ -12,7 +12,9 @@ Currently the following artifacts are wrapped and published as their own Maven m
 | original `groupId` | original `artifactId` | original `version` | new `groupId` | new `artifactId` | new `version` | Notes |
 |--------------------|-----------------------|--------------------|---------------|------------------|---------------|-------|
 | org.apache.commons | commons-compress | ¹ | io.github.1tchy.java9modular.org.apache.commons | commons-compress | ![Maven Central](https://img.shields.io/maven-central/v/io.github.1tchy.java9modular.org.apache.commons/commons-compress?label=Latest%20version) | Also comes with the `org.tukaani` artifact to support xz-compression. |
+
 ¹ The version of the original artifact is equal to the version of the new artifact without the last part (e.g. new: `1.18.1` was originally `1.18`).
+
 ### Example
 ```
 <dependency>
