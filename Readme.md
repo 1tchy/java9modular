@@ -9,9 +9,9 @@ I hope this project gets redundant soon and most projects supply a module-info b
 ## Supplied artifacts
 Currently the following artifacts are wrapped and published as their own Maven module.
 
-| original `groupId` | original `artifactId` | original `version` | new `groupId` | new `artifactId` | new `version` | Notes |
-|--------------------|-----------------------|--------------------|---------------|------------------|---------------|-------|
-| org.apache.commons | commons-compress | ¹ | io.github.1tchy.java9modular.org.apache.commons | commons-compress | ![Maven Central](https://img.shields.io/maven-central/v/io.github.1tchy.java9modular.org.apache.commons/commons-compress?label=Latest%20version) | Also comes with the `org.tukaani` artifact to support xz-compression. |
+| Original artifact | New artifact | Notes |
+|-------------------|--------------|-------|
+| `groupId: org.apache.commons` <br> `artifactId: commons-compress` <br> `version: ¹` | `groupId: io.github.1tchy.java9modular.org.apache.commons` <br> `artifactId: commons-compress` <br> `version:` ![Maven Central](https://img.shields.io/maven-central/v/io.github.1tchy.java9modular.org.apache.commons/commons-compress?label=Latest%20version) | Also comes with the `org.tukaani` artifact to support xz-compression. |
 
 ¹ The version of the original artifact is equal to the version of the new artifact without the last part (e.g. new: `1.18.1` was originally `1.18`).
 
