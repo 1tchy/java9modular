@@ -15,7 +15,7 @@
     <properties>
         <modularized.groupId>org.apache.commons</modularized.groupId>
         <modularized.artifactId>commons-compress</modularized.artifactId>
-        <modularized.version>1.19</modularized.version>
+        <modularized.version>1.21</modularized.version>
         <packed-and-unpacked-sources-dir>${project.build.directory}/sources</packed-and-unpacked-sources-dir>
     </properties>
 
