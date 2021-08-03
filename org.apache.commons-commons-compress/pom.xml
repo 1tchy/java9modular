@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.1tchy.java9modular.org.apache.commons</groupId>
     <artifactId>commons-compress</artifactId>
-    <version>1.19.1-SNAPSHOT</version>
+    <version>1.21.0-SNAPSHOT</version>
 
     <parent>
         <groupId>io.github.1tchy.java9modular</groupId>
@@ -15,7 +16,7 @@
     <properties>
         <modularized.groupId>org.apache.commons</modularized.groupId>
         <modularized.artifactId>commons-compress</modularized.artifactId>
-        <modularized.version>1.19</modularized.version>
+        <modularized.version>1.21</modularized.version>
         <packed-and-unpacked-sources-dir>${project.build.directory}/sources</packed-and-unpacked-sources-dir>
     </properties>
 
@@ -43,7 +44,8 @@
         <dependency>
             <groupId>org.tukaani</groupId>
             <artifactId>xz</artifactId>
-            <version>1.8</version>
+            <version>1.9</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -72,8 +74,7 @@
                                         <exclude>
                                             org/apache/commons/compress/compressors/zstandard/ZstdCompressorOutputStream.*
                                         </exclude>
-                                        <exclude>org/apache/commons/compress/compressors/CompressorStreamFactory.*
-                                        </exclude>
+                                        <exclude>org/apache/commons/compress/harmony/pack200/*</exclude>
                                     </excludes>
                                 </filter>
                             </filters>
@@ -94,8 +95,16 @@
                             <module>
                                 <moduleInfo>
                                     <name>org.apache.commons.compress</name>
+                                    <requires>
+                                        !org.apache.commons.compress;
+                                        *;
+                                    </requires>
                                 </moduleInfo>
                             </module>
+                            <jdepsExtraArgs>
+                                <arg>--multi-release</arg>
+                                <arg>9</arg>
+                            </jdepsExtraArgs>
                         </configuration>
                     </execution>
                 </executions>

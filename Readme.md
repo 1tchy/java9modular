@@ -1,19 +1,19 @@
 ## Introduction
 
-This project should help migrating from Java 8 and earlier to Java 9/10/11/12/13/… and their modular structure. It duplicates other open source projects but provides a `module-info.java`/`module-info.class`. With this modularisation they can be used by `jlink` and other new tools.
+This project should help to migrate from Java 8 and earlier to Java 9/11/17/… and their modular structure. It duplicates other open source projects but provides a `module-info.java`/`module-info.class`. With this modularisation they can be used by `jlink` and other new tools.
 
 This project heavily uses the [ModiTect Maven Plugin](https://github.com/moditect/moditect), thanks to its developers!
 
 I hope this project gets redundant soon and most projects supply a module-info by themselves.
 
 ## Supplied artifacts
-Currently the following artifacts are wrapped and published as their own Maven module.
+Currently, the following artifacts are wrapped and published as their own Maven module.
 
 | Original artifact | New artifact | Notes |
 |-------------------|--------------|-------|
-| `groupId: org.apache.commons` <br> `artifactId: commons-compress` <br> `version: ¹` | `groupId: io.github.1tchy.java9modular.org.apache.commons` <br> `artifactId: commons-compress` <br> `version:` [![Maven Central](https://img.shields.io/maven-central/v/io.github.1tchy.java9modular.org.apache.commons/commons-compress?label=Latest%20version)](https://mvnrepository.com/artifact/io.github.1tchy.java9modular.org.apache.commons/commons-compress)  | Also comes with the `org.tukaani` artifact to support xz-compression. |
+| `groupId: org.apache.commons` <br> `artifactId: commons-compress` <br> `version: ¹` | `groupId: io.github.1tchy.java9modular.org.apache.commons` <br> `artifactId: commons-compress` <br> `version:` [![Maven Central](https://img.shields.io/maven-central/v/io.github.1tchy.java9modular.org.apache.commons/commons-compress?label=Latest%20version)](https://mvnrepository.com/artifact/io.github.1tchy.java9modular.org.apache.commons/commons-compress) | Statically depends on the `org.tukaani` artifact to support xz-compression. |
 
-¹ The version of the original artifact is equal to the version of the new artifact without the last part (e.g. new: `1.18.1` was originally `1.18`).
+¹ The version of the original artifact is equal to the version of the new artifact without the last part (e.g. new: `1.21.0` was originally `1.21`).
 
 ### Example
 ```
@@ -34,7 +34,7 @@ The above is basically equal to the following, but it is modularized - so it con
 It contains (almost) all the same classes plus a (generated) module-info exporting all packages.
 
 ## Getting more artifacts
-I would like to supply more artifacts, but I guess I will not have time for it. However I would be happy to accept some pull requests! Please feel free to send me one:
+I would like to supply more artifacts, but I guess I will not have time for it. However, I would be happy to accept some pull requests! Please feel free to send me one:
 
 1. Checkout project
 1. Duplicate an existing Maven sub-module
